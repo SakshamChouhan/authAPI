@@ -1,0 +1,62 @@
+openapi: 3.0.0
+info:
+  title: User Authentication API
+  description: API documentation for user authentication (signup, login, profile)
+  version: "1.0.0"
+paths:
+  /api/signup:
+    post:
+      summary: User Signup
+      description: Register a new user by providing username, email, and password.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                  example: "johndoe"
+                email:
+                  type: string
+                  example: "johndoe@example.com"
+                password:
+                  type: string
+                  example: "password123"
+      responses:
+        201:
+          description: User registered successfully
+        400:
+          description: Invalid input
+
+  /api/login:
+    post:
+      summary: User Login
+      description: Login user by providing email and password to receive a JWT token.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  example: "johndoe@example.com"
+                password:
+                  type: string
+                  example: "password123"
+      responses:
+        200:
+          description: Login successful, JWT token returned
+        400:
+          description: Invalid credentials
+
+  /api/profile:
+    get:
+      summary: User Profile
+      description: Retrieve the profile of the logged-in user using a valid JWT token.
+      responses:
+        200:
+          description: User profile returned successfully
+        401:
+          description: Unauthorized, invalid or expired token
