@@ -27,8 +27,8 @@ This project is a RESTful API built with Node.js, Express, and MongoDB, designed
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
-   cd <repository-name>
+   git clone https://github.com/SakshamChouhan/authAP
+   cd authAPI
 2. Install dependencies:
    ```bash
    npm install
