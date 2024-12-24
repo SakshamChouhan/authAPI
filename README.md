@@ -19,7 +19,7 @@ This project is a RESTful API built with Node.js, Express, and MongoDB, designed
 ## Getting Started
 
 ### Prerequisites
-- Node.js (v14 or later)
+- Node.js (v16 or earlier)
 - MongoDB Atlas account
 - Email account (e.g., Gmail) for sending confirmation emails
 
